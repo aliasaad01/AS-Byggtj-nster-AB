@@ -1,0 +1,6 @@
+{
+  "name": "AS Byggtjänster AB",
+  "description": "Premium svensk byggfirma med fokus på skandinavisk hantverkskvalitet och lyxiga detaljer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

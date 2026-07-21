@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Hanken Grotesk", sans-serif;
+  
+  --color-primary: #111111;
+  --color-gold: #D4A437;
+  --color-gold-hover: #C29329;
+  --color-gold-light: #FBF7ED;
+  --color-dark-gray: #1E1F21;
+  --color-muted-dark: #5A5E63;
+  --color-light-gray: #F9FAFB;
+  
+  --spacing-section-gap: 128px;
+}
+
+@layer utilities {
+  .glass-card {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+  }
+  
+  .glass-card-dark {
+    background-color: rgba(30, 31, 33, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #FFFFFF;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-primary);
+  overflow-x: hidden;
+}
+
+/* Customize smooth scroll margins so sticky nav doesn't cut off section headers */
+section {
+  scroll-margin-top: 80px;
+}
