@@ -193,7 +193,7 @@ export const TESTIMONIALS: Testimonial[] = [
     id: "3",
     name: "Anders Bergström",
     role: "Fastighetsutvecklare",
-    location: "Stockholm",
+    location: "Helsingborg",
     content:
       "Tydlig kommunikation, transparent prissättning och hög teknisk expertis genom hela projektet. Vi kände oss helt trygga från första offerten till slutbesiktningen. Ett skolboksexempel på hur en modern byggfirma ska drivas.",
     rating: 5,
