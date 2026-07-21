@@ -11,6 +11,9 @@ import { ProjectLightbox } from "../components/gallery/ProjectLightbox";
 import { CategoryFilters } from "../components/gallery/CategoryFilters";
 
 export const Gallery: React.FC = () => {
+  // مرجع للوصول إلى بداية الفلاتر عند التصفح
+  const filterRef = React.useRef<HTMLDivElement>(null);
+
   // 1. Dynamic Category Extraction (with counts)
   const categories = React.useMemo(() => {
     const rawCategories = PROJECTS.map((p) => p.category);
@@ -55,6 +58,17 @@ export const Gallery: React.FC = () => {
     return PROJECTS.filter((p) => p.category === cat).length;
   }, []);
 
+  // دالة تغيير الصفحة مع السكرول السلس لبداية الفلاتر
+  const handlePageChange = (pageNumber: number) => {
+    setCurrentPage(pageNumber);
+    if (filterRef.current) {
+      filterRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <Section id="projects" variant="light" className="relative py-18 md:py-24">
       {/* Decorative premium background visuals */}
@@ -63,8 +77,14 @@ export const Gallery: React.FC = () => {
       <div className="absolute bottom-1/3 right-0 w-96 h-96 bg-primary/1 blur-3xl rounded-full pointer-events-none" />
 
       <Container size="xl">
-        {/* Dynamic header title section with visual counts */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 mb-16">
+        {/* أنيميشن دخول خفيف وناعم للهيدر */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10 mb-16"
+        >
           <div className="max-w-2xl space-y-3 text-left">
             <Typography
               variant="label"
@@ -109,15 +129,24 @@ export const Gallery: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
 
-        {/* Dynamic Category Filtering Controller Grid */}
-        <CategoryFilters
-          categories={categories}
-          activeCategory={activeCategory}
-          setActiveCategory={setActiveCategory}
-          getCategoryCount={getCategoryCount}
-        />
+        {/* Dynamic Category Filtering Controller Grid - المرجع يبدأ من هنا */}
+        <motion.div
+          ref={filterRef}
+          className="scroll-mt-28"
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
+        >
+          <CategoryFilters
+            categories={categories}
+            activeCategory={activeCategory}
+            setActiveCategory={setActiveCategory}
+            getCategoryCount={getCategoryCount}
+          />
+        </motion.div>
 
         {/* Active Filters Display & Project Count Indicator */}
         <div className="flex items-center justify-between text-xs text-muted-dark mb-8">
@@ -138,23 +167,28 @@ export const Gallery: React.FC = () => {
           )}
         </div>
 
-        {/* Gallery Project Grid Layout - إضافة انسيابية حركة الجريد بالكامل */}
+        {/* Gallery Project Grid Layout - حركة انسيابية وسلسة بدون أي قفزات */}
         <motion.div
-          layout="position"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-112.5"
+          layout
+          className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-112.5"
+          transition={{
+            type: "spring",
+            stiffness: 200,
+            damping: 25,
+          }}
         >
           <AnimatePresence mode="popLayout">
             {paginatedProjects.map((project, idx) => (
               <motion.div
                 key={project.id}
                 layout
-                initial={{ opacity: 0, y: 30, scale: 0.95 }}
+                initial={{ opacity: 0, y: 20, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.93, y: 20 }}
+                exit={{ opacity: 0, scale: 0.95, y: 15 }}
                 transition={{
                   type: "spring",
-                  stiffness: 100,
-                  damping: 18,
+                  stiffness: 220,
+                  damping: 24,
                   mass: 0.8,
                 }}
                 className="h-full"
@@ -188,11 +222,11 @@ export const Gallery: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-16 pt-8 border-t border-black/5">
             <button
               disabled={currentPage === 1}
-              onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+              onClick={() => handlePageChange(Math.max(currentPage - 1, 1))}
               className={`flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border outline-none ${
                 currentPage === 1
                   ? "bg-black/2 text-primary/30 border-black/5 cursor-not-allowed"
-                  : "bg-white text-primary border-black/10 hover:bg-black/3"
+                  : "bg-white text-primary border-black/10 hover:bg-black/3 cursor-pointer"
               }`}
             >
               <ChevronLeft className="h-4 w-4 shrink-0" /> Föregående
@@ -206,8 +240,8 @@ export const Gallery: React.FC = () => {
                 return (
                   <button
                     key={pageNumber}
-                    onClick={() => setCurrentPage(pageNumber)}
-                    className={`w-10 h-10 rounded-xl text-xs font-mono font-bold transition-all outline-none ${
+                    onClick={() => handlePageChange(pageNumber)}
+                    className={`w-10 h-10 rounded-xl text-xs font-mono font-bold transition-all outline-none cursor-pointer ${
                       isCurrent
                         ? "bg-primary text-white shadow-md shadow-primary/10"
                         : "bg-white text-primary hover:bg-black/3 border border-black/5"
@@ -222,12 +256,12 @@ export const Gallery: React.FC = () => {
             <button
               disabled={currentPage === totalPages}
               onClick={() =>
-                setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+                handlePageChange(Math.min(currentPage + 1, totalPages))
               }
               className={`flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all border outline-none ${
                 currentPage === totalPages
                   ? "bg-black/2 text-primary/30 border-black/5 cursor-not-allowed"
-                  : "bg-white text-primary border-black/10 hover:bg-black/3"
+                  : "bg-white text-primary border-black/10 hover:bg-black/3 cursor-pointer"
               }`}
             >
               Nästa <ChevronRight className="h-4 w-4 shrink-0" />
