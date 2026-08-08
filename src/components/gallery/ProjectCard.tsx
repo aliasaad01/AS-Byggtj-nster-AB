@@ -1,6 +1,6 @@
 import * as React from "react";
 import { motion } from "motion/react";
-import { MapPin, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { GalleryProject } from "../../types";
 import { Typography } from "../ui/Typography";
 
@@ -45,10 +45,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           <h3 className="text-white font-display text-lg font-bold">
             {project.title}
           </h3>
-          <div className="flex items-center gap-1.5 text-white/80 font-sans text-xs mt-1">
-            <MapPin className="h-3 w-3 text-gold shrink-0" />
-            {project.location}
-          </div>
         </div>
       </div>
 
@@ -64,30 +60,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
         >
           {project.title}
         </Typography>
-        <Typography
-          variant="body"
-          className="text-white/80 font-sans text-xs leading-relaxed mb-6 font-light line-clamp-3"
-        >
-          {project.description}
-        </Typography>
-
-        {/* Micro specification points */}
-        <div className="grid grid-cols-2 gap-2 pb-6 border-b border-white/10 mb-6 font-sans text-[10px] text-white/60">
-          <div>
-            <span className="block text-white/40 uppercase tracking-wider">
-              Slutfört:
-            </span>
-            <span className="font-medium text-white">{project.year}</span>
-          </div>
-          <div>
-            <span className="block text-white/40 uppercase tracking-wider">
-              Plats:
-            </span>
-            <span className="font-medium text-white">
-              {project.location.split(",")[0]}
-            </span>
-          </div>
-        </div>
 
         <div className="flex items-center gap-2 text-gold font-sans text-xs font-bold uppercase tracking-widest">
           Visa projektdetaljer{" "}

@@ -2,101 +2,27 @@ import { Service, Project, Testimonial } from "../types";
 
 export const COMPANY_INFO = {
   name: "AS Byggtjänster AB",
-  tagline: "Excellens i varje detalj",
+  tagline: "Kvalitet i varje detalj",
   logo: "/logo.png",
-  phone: "+46 (0) 8 123 45 67",
+  phone: "+464258542",
   email: "info@asbyggtjanster.se",
   address: "Verksam i Helsingborg och närliggande kommuner i Skåne",
   aboutImage: "/images/about/about.webp",
   heroBg: "/images/home/home.webp",
 };
 
-// export const SERVICES: Service[] = [
-//   {
-//     id: "kok",
-//     title: "Köksrenovering",
-//     description: "Vi skapar drömkök med högkvalitativa material och smart funktionalitet anpassad för din vardag.",
-//     icon: "Utensils",
-//     details: [
-//       "Skräddarsydd köksdesign & planering",
-//       "Montering av exklusiva kökssnickerier",
-//       "Elinstallationer & VVS av certifierade fackmän",
-//       "Stenbänkskivor & måttbeställda stänkskydd",
-//     ],
-//   },
-//   {
-//     id: "badrum",
-//     title: "Badrumsrenovering",
-//     description: "Totalentreprenad för badrum med våtrumscertifikat och öga för lyxiga, tidlösa detaljer.",
-//     icon: "Bath",
-//     details: [
-//       "Totalentreprenad med GVK/BKR-våtrumsintyg",
-//       "Kakel, klinker & exklusiv natursten",
-//       "Golvvärme, dolda rör & belysningsdesign",
-//       "Installation av premium sanitetsporslin",
-//     ],
-//   },
-//   {
-//     id: "altan",
-//     title: "Altan & Terrass",
-//     description: "Förläng sommarsäsongen med en arkitektritad uteplats sömlöst anpassad efter din tomt.",
-//     icon: "Sun",
-//     details: [
-//       "Trädäck i sibirisk lärk, komposit eller tryckimpregnerat",
-//       "Platsbyggda bänkar, trappor & pergola",
-//       "Integrerad LED-belysning",
-//       "Räcken i glas, smide eller trä",
-//     ],
-//   },
-//   {
-//     id: "tradgard",
-//     title: "Trädgård & Markarbete",
-//     description: "Markarbete och professionell trädgårdsdesign som lyfter fastighetens totala helhetsintryck.",
-//     icon: "Spade",
-//     details: [
-//       "Stenläggning av gångar, uppfarter & murar",
-//       "Markutjämning & dränering",
-//       "Platsbyggda planteringslådor & stödmurar",
-//       "Gräsanläggning (rullgräs eller sådd)",
-//     ],
-//   },
-//   {
-//     id: "staket",
-//     title: "Staket & Grindar",
-//     description: "Stilrena staket och grindar som skapar integritet och en inbjudande, välkomnande känsla.",
-//     icon: "Fence",
-//     details: [
-//       "Klassiska & moderna trästaket",
-//       "Underhållsfria kompositlösningar",
-//       "Smidesräcken & måttbeställda grindar",
-//       "Installation av automatiserade grindöppnare",
-//     ],
-//   },
-//   {
-//     id: "renovering",
-//     title: "Måleri & Totalrenovering",
-//     description: "Invändigt och utvändigt måleri utfört med extrem precision och marknadens bästa färgval.",
-//     icon: "Paintbrush",
-//     details: [
-//       "Fasadmålning & utvändigt snickeriarbete",
-//       "Invändig bredspackling, tapetsering & snickerimålning",
-//       "Golvslipning & ytbehandling",
-//       "Totalrenoveringar av lägenheter & villor",
-//     ],
-//   },
-// ];
 export const SERVICES: Service[] = [
   {
     id: "nybyggnation",
     title: "Nybyggnation",
     description:
-      "Vi hjälper dig från idé till färdigt projekt med fokus på kvalitet, hållbarhet och modern svensk design.",
+      "Vi hjälper dig hela vägen från idé till färdigt hus. Vi bygger med kvalitet och noggrannhet och ser till att projektet blir som du vill ha det.",
     icon: "Home",
     details: [
-      "Totalentreprenad från ritning till färdigt hus",
-      "Nyckelfärdiga villor och arkitektritade hem",
-      "Projektledning och bygglovshantering",
-      "Energieffektiva och miljösmarta byggmaterial",
+      "Vi bygger ditt hus från start till färdigt resultat.",
+      "Vi bygger villor och andra hus efter dina önskemål.",
+      "Vi hjälper till med projektledning och bygglov.",
+      "Vi använder hållbara och energieffektiva byggmaterial.",
     ],
   },
   {
@@ -116,52 +42,52 @@ export const SERVICES: Service[] = [
     id: "tillbyggnad",
     title: "Tillbyggnad",
     description:
-      "Behöver du mer utrymme? Vi bygger ut ditt hem på ett smart, säkert och hållbart sätt.",
+      "Behöver du mer plats? Vi bygger ut ditt hus på ett tryggt och hållbart sätt. Vi hjälper dig från planering till färdigt resultat.",
     icon: "Layers",
     details: [
-      "Utbyggnad av villor, garage och attefallshus",
-      "Sömlös integration med befintlig arkitektur",
-      "Tilläggsisolering och energieffektivisering",
-      "Komplett konstruktion från grund till tak",
+      "Tillbyggnad av hus, garage och attefallshus.",
+      "Vi ser till att tillbyggnaden passar ihop med ditt hus.",
+      "Vi förbättrar isoleringen och hjälper till att minska energiförbrukningen.",
+      "Vi bygger hela tillbyggnaden – från grund till tak.",
     ],
   },
   {
     id: "altan-tradeck",
     title: "Altan & Trädäck",
     description:
-      "Skräddarsydda altaner, trädäck och uteplatser som är perfekt anpassade efter ditt hem och din tomt.",
+      "Vi bygger altaner och trädäck som passar ditt hus och din trädgård. Tillsammans skapar vi en uteplats där du kan trivas året om.",
     icon: "Sun",
     details: [
-      "Platsbyggda trädäck i premiummaterial (t.ex. lärk, komposit)",
-      "Integrerad LED-belysning och dolda skruvmontage",
-      "Bygge av trappor, räcken, pergolas och skärmväggar",
-      "Markarbete och stabila grundläggningar",
+      "Altaner och trädäck byggda efter dina önskemål.",
+      "Möjlighet till belysning och snygga, dolda skruvar.",
+      "Byggnation av trappor, räcken, pergolor och insynsskydd.",
+      "Markarbete och en stabil grund för ett hållbart resultat.",
     ],
   },
   {
     id: "tak-fasad",
     title: "Tak & Fasad",
     description:
-      "Professionella takbyten, fasadrenoveringar och långsiktigt underhåll som skyddar ditt hus mot väder och vind.",
+      "Vi hjälper dig med tak och fasad så att ditt hus håller längre och skyddas mot regn, vind och väder. Vi arbetar med kvalitet och noggrannhet.",
     icon: "Shield",
     details: [
-      "Kompletta takbyten (tegel, betongpanna, bandtäckning)",
-      "Fasadrenovering, omfärgning och tilläggsisolering",
-      "Byte och renovering av fönster och dörrar",
-      "Montering av hängrännor, stuprör och taksäkerhet",
+      "Byte och renovering av tak.",
+      "Renovering, målning och isolering av fasaden.",
+      "Byte och renovering av fönster och dörrar.",
+      "Montering av hängrännor, stuprör och taksäkerhet.",
     ],
   },
   {
     id: "snickeri",
     title: "Snickeri",
     description:
-      "Specialanpassade lösningar, innerväggar, golv, lister och mycket mer utfört med extrem precision.",
+      "Vi hjälper dig med allt inom snickeri – från innerväggar och golv till lister och andra lösningar. Vi arbetar noggrant och anpassar arbetet efter dina önskemål.",
     icon: "Construction",
     details: [
-      "Platsbyggda möbler, garderober och förvaringslösningar",
-      "Montering av innerväggar, dörrfoder och golvlister",
-      "Professionell golvläggning och trapprenovering",
-      "Skräddarsydda finsnickerier efter dina unika önskemål",
+      "Platsbyggda möbler, garderober och smart förvaring.",
+      "Montering av innerväggar, dörrfoder och golvlister.",
+      "Läggning av golv och renovering av trappor.",
+      "Specialbyggda snickerier efter dina önskemål.",
     ],
   },
 ];

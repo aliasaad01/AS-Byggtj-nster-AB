@@ -42,19 +42,6 @@ export const ContactForm: React.FC = () => {
     },
   });
 
-  // const onSubmit = async (data: FormData) => {
-  //   setSubmitStatus("loading");
-
-  //   try {
-  //     // Simulate highly robust server request
-  //     await new Promise((resolve) => setTimeout(resolve, 1500));
-  //     setSubmitStatus("success");
-  //     reset();
-  //   } catch (e) {
-  //     setSubmitStatus("error");
-  //   }
-  // };
-
   const onSubmit = async (data: FormData) => {
     setSubmitStatus("loading");
 
@@ -66,7 +53,7 @@ export const ContactForm: React.FC = () => {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY, // يقرأ المفتاح تلقائياً وبأمان
+          access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
           subject: `Ny offert från: ${data.name} - ${data.projectType}`,
           from_name: "AS Byggtjänster Webportal",
           name: data.name,

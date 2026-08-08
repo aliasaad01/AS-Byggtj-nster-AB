@@ -8,23 +8,23 @@ import { Section } from "../components/ui/Section";
 import { Typography } from "../components/ui/Typography";
 
 export const About: React.FC = () => {
-  const milestones = [
-    {
-      year: "2017",
-      title: "Företaget Grundas",
-      desc: "Vi startade med en handfull hantverkare specialiserade på platsbyggda kök i Helsingborg.",
-    },
-    {
-      year: "2020",
-      title: "Våtrumsbehörighet & Totalentreprenad",
-      desc: "Med GVK-behörighet expanderade vi till exklusiva badrum och kompletta villarenoveringar.",
-    },
-    {
-      year: "2026",
-      title: "Svensk Trygghet",
-      desc: "Idag är vi en väletablerad premiumaktör känd för kompromisslös hantverksskicklighet.",
-    },
-  ];
+  // const milestones = [
+  //   {
+  //     year: "2017",
+  //     title: "Företaget Grundas",
+  //     desc: "Vi startade med en handfull hantverkare specialiserade på platsbyggda kök i Helsingborg.",
+  //   },
+  //   {
+  //     year: "2020",
+  //     title: "Våtrumsbehörighet & Totalentreprenad",
+  //     desc: "Med GVK-behörighet expanderade vi till exklusiva badrum och kompletta villarenoveringar.",
+  //   },
+  //   {
+  //     year: "2026",
+  //     title: "Svensk Trygghet",
+  //     desc: "Idag är vi en väletablerad premiumaktör känd för kompromisslös hantverksskicklighet.",
+  //   },
+  // ];
 
   return (
     <Section
@@ -90,16 +90,16 @@ export const About: React.FC = () => {
           {/* Copy block & timeline (right on large screens) */}
           <div className="lg:col-span-7 flex flex-col justify-center">
             <SectionTitle
-              badge="Vår Historia"
-              title="Ett byggföretag du kan lita på "
+              badge="Vår bakgrund"
+              title="Ett byggföretag du kan lita på"
               description={
-                "AS Byggtjänster AB är ett byggföretag i Helsingborg.\n\nVi hjälper privatpersoner, företag och bostadsrättsföreningar med renoveringar och byggprojekt i Helsingborg och närliggande kommuner i Skåne.\n\nVi arbetar noggrant, håller en nära kontakt med våra kunder och vill alltid leverera ett resultat som du blir nöjd med. Oavsett om det gäller ett litet eller stort projekt kan du känna dig trygg med oss från början till slut."
+                "AS Byggtjänster AB är ett byggföretag i Helsingborg som grundades år 2023.\n\nVi hjälper privatpersoner, företag och bostadsrättsföreningar med renoveringar, ombyggnationer och andra byggprojekt i Helsingborg och övriga Skåne.\n\nVi arbetar noggrant, håller vad vi lovar och har en nära kontakt med våra kunder. Vårt mål är att du ska känna dig trygg genom hela projektet från första mötet till det färdiga resultatet.\n\nOavsett om det gäller ett litet jobb eller ett större byggprojekt finns vi här för att hjälpa dig."
               }
               align="left"
             />
 
             {/* Interactive Timeline */}
-            <div className="space-y-8 relative before:absolute before:left-3 before:top-2 before:bottom-2 before:w-px before:bg-black/10 mt-8 pl-1">
+            {/* <div className="space-y-8 relative before:absolute before:left-3 before:top-2 before:bottom-2 before:w-px before:bg-black/10 mt-8 pl-1">
               {milestones.map((milestone, idx) => (
                 <motion.div
                   key={idx}
@@ -136,7 +136,7 @@ export const About: React.FC = () => {
                   </div>
                 </motion.div>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </Container>

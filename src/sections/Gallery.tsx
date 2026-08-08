@@ -11,7 +11,6 @@ import { ProjectLightbox } from "../components/gallery/ProjectLightbox";
 import { CategoryFilters } from "../components/gallery/CategoryFilters";
 
 export const Gallery: React.FC = () => {
-  // مرجع للوصول إلى بداية الفلاتر عند التصفح
   const filterRef = React.useRef<HTMLDivElement>(null);
 
   // 1. Dynamic Category Extraction (with counts)
@@ -91,22 +90,22 @@ export const Gallery: React.FC = () => {
               color="gold"
               className="text-xs uppercase tracking-[0.25em] font-semibold block"
             >
-              Vår Exklusiva Portfölj
+              Vårt arbete
             </Typography>
             <Typography
               variant="h2"
               color="primary"
               className="text-3xl md:text-5xl font-display font-extrabold tracking-tight leading-tight"
             >
-              Inspireras av Våra Slutförda Drömprojekt
+              Se våra färdiga projekt
             </Typography>
             <Typography
               variant="body"
               className="text-muted-dark text-sm md:text-base font-light"
             >
-              Bläddra igenom våra nyligen levererade entreprenader. Varje
-              projekt är ett bevis på extrem noggrannhet, premiummaterial och
-              tidslös design.
+              Titta på några av de byggprojekt vi har gjort. Här kan du se
+              exempel på vårt arbete och den kvalitet vi levererar till våra
+              kunder.
             </Typography>
           </div>
 

@@ -206,7 +206,7 @@ export const ProjectLightbox: React.FC<ProjectLightboxProps> = ({
             </div>
 
             {/* Project specifications table rendering */}
-            {project.specs && project.specs.length > 0 && (
+            {/* {project.specs && project.specs.length > 0 && (
               <div className="bg-light-gray/60 p-4 rounded-2xl border border-black/3">
                 <Typography
                   variant="label"
@@ -228,7 +228,7 @@ export const ProjectLightbox: React.FC<ProjectLightboxProps> = ({
                   ))}
                 </div>
               </div>
-            )}
+            )} */}
 
             {/* Dynamic Scope of Work */}
             {project.scopeOfWork && project.scopeOfWork.length > 0 && (
@@ -238,7 +238,7 @@ export const ProjectLightbox: React.FC<ProjectLightboxProps> = ({
                   color="gold"
                   className="text-[10px] tracking-[0.2em] uppercase font-bold block"
                 >
-                  Utförda Arbeten &amp; Omfattning
+                  Planerade och utförda arbeten
                 </Typography>
                 <ul className="space-y-2.5">
                   {project.scopeOfWork.map((task, idx) => (
@@ -254,7 +254,7 @@ export const ProjectLightbox: React.FC<ProjectLightboxProps> = ({
             )}
 
             {/* Pull-quote Testimonial Block */}
-            {project.testimonial && (
+            {/* {project.testimonial && (
               <div className="bg-primary/2 p-5 rounded-2xl border-l-2 border-gold space-y-3 relative overflow-hidden">
                 <Quote className="absolute right-3 top-3 h-10 w-10 text-gold/5 pointer-events-none" />
                 <div className="flex items-center gap-1">
@@ -277,7 +277,7 @@ export const ProjectLightbox: React.FC<ProjectLightboxProps> = ({
                   — {project.testimonial.author}
                 </Typography>
               </div>
-            )}
+            )} */}
           </div>
 
           {/* Footer sticky panel action bar */}

@@ -39,7 +39,7 @@ export const SectionTitle: React.FC<SectionTitleProps> = ({
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6, delay: 0.1 }}
-        className={`font-display text-3xl md:text-5xl font-bold tracking-tight leading-tight ${
+        className={`font-display text-2xl md:text-5xl font-bold tracking-tight leading-tight ${
           theme === "light" ? "text-primary" : "text-white"
         } mb-6 text-balance`}
       >

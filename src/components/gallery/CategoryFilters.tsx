@@ -29,7 +29,7 @@ export const CategoryFilters: React.FC<CategoryFiltersProps> = ({
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`relative px-4 py-2 rounded-xl text-xs font-sans font-bold uppercase tracking-widest transition-all duration-300 outline-none flex items-center gap-2 border border-transparent ${
+              className={`relative px-4 py-2 rounded-xl text-xs font-sans font-bold uppercase tracking-widest transition-all duration-300 outline-none flex items-center gap-2 border border-transparent cursor-pointer ${
                 isActive
                   ? "bg-primary text-white shadow-lg shadow-primary/15"
                   : "bg-white text-primary hover:bg-black/5 border-black/6"

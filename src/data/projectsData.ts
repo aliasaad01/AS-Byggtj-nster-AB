@@ -1,13 +1,5 @@
-import { Project, GalleryProject } from "../types";
+import { GalleryProject } from "../types";
 
-/**
- * 📸 EASY-REPLACE IMAGE CONFIGURATION
- *
- * To update the portfolio with your real project photos:
- * 1. Upload your photos to your server or a cloud storage provider.
- * 2. Replace the URLs below with your custom image URLs or local relative paths (e.g., "/images/projects/kök-1.jpg").
- * 3. Each project can have a primary image AND multiple secondary slide images for the premium carousel lightbox!
- */
 export const PROJECT_IMAGES = {
   // --- KÖK (Kitchens) ---
   kitchenSaltsjobadenMain: "/images/kök/1/4.webp",
@@ -101,7 +93,7 @@ export const PROJECT_IMAGES = {
 export const PROJECTS: GalleryProject[] = [
   {
     id: "saltsjobaden",
-    title: "Exklusivt Kök Laröd",
+    title: "Exklusivt Kök",
     description:
       "Ett komplett skräddarsytt kök med integrerade vitvaror, carraramarmor och handmålade luckor i tidlös skandinavisk stil.",
     category: "Kök",
@@ -116,10 +108,11 @@ export const PROJECTS: GalleryProject[] = [
     year: "2025",
     location: "Helsingborg",
     scopeOfWork: [
-      "Platsbyggd stommontering & justering av dörrar",
-      "Stenmätning och precisionsskärning av Carraramarmor",
-      "Elinstallation av integrerade vitvaror & dimmerbelysning",
-      "Komplett VVS-installation med dolda rördragningar",
+      "Rivning av det gamla köket.",
+      "Montering av köksstommar och luckor.",
+      "Installation av bänkskiva och vitvaror.",
+      "Montering av belysning och detaljer.",
+      "Slutkontroll och färdigställande.",
     ],
     specs: [
       { label: "Projekttyp", value: "Premium Kök" },
@@ -135,9 +128,9 @@ export const PROJECTS: GalleryProject[] = [
   },
   {
     id: "sjostad",
-    title: "Terrass & Lounge Rydebäck",
+    title: "Terass",
     description:
-      "En storslagen terrass i sibirisk lärk med integrerad spabadslösning, infinity-känsla och platsbyggd lounge.",
+      "En modern terrass i trä som skapar en stor och trivsam uteplats.",
     category: "Terrass",
     image: PROJECT_IMAGES.terraceSjostadMain,
     slides: [
@@ -149,10 +142,11 @@ export const PROJECTS: GalleryProject[] = [
     year: "2024",
     location: "Helsingborg",
     scopeOfWork: [
-      "Stabilitetsberäkning & förstärkt bärlina för spabad",
-      "Dold skruvning av sibirisk lärk (A-kvalitet)",
-      "Konstruktion av platsbyggd hörnlounge med förvaring",
-      "Installation av IP-klassad utomhusbelysning med app-styrning",
+      "Markförberedelser och grundarbete.",
+      "Byggnation av terrass.",
+      "Montering av trall.",
+      "Justering och finish.",
+      "Slutkontroll och färdigställande.",
     ],
     specs: [
       { label: "Material", value: "Sibirisk Lärk" },
@@ -168,9 +162,9 @@ export const PROJECTS: GalleryProject[] = [
   },
   {
     id: "vasastan",
-    title: "Limestone Oasis Ramlösa",
+    title: "Modernt Badrum",
     description:
-      "Ett master-badrum inspirerat av femstjärniga boutiquehotell med storformatig kalksten och blandare i borstad mässing.",
+      "Ett modernt badrum med stora kakelplattor, snygga detaljer och en stilren design.",
     category: "Badrum",
     image: PROJECT_IMAGES.bathroomVasastanMain,
     slides: [
@@ -183,10 +177,11 @@ export const PROJECTS: GalleryProject[] = [
     year: "2025",
     location: "Helsingborg",
     scopeOfWork: [
-      "Rivning enligt gällande branschregler och fuktsäkring",
-      "Applicering av godkänt tätskiktssystem (BKR-våtrumsintyg)",
-      "Läggning av storformatig kalksten med minimala fogar",
-      "Montering av inbyggda mässingsblandare & nischbelysning",
+      "Rivning av det gamla badrummet enligt gällande branschregler.",
+      "Montering av godkänt tätskikt på väggar och golv.",
+      "Läggning av kakel och klinker.",
+      "Installation av blandare, dusch, toalett och tvättställ.",
+      "Montering av belysning och slutkontroll av färdigt badrum.",
     ],
     specs: [
       { label: "Sten", value: "Jura kalksten 60x60cm" },
@@ -202,9 +197,9 @@ export const PROJECTS: GalleryProject[] = [
   },
   {
     id: "Modern",
-    title: "Modernt Badrum Mariastaden",
+    title: "Stilrent Badrum",
     description:
-      "Ett lyxigt och stilrent badrum med storformatig keramik i betonglook, infällda nischer med stämningsfull LED-belysning.",
+      "Vi renoverade badrummet med stora kakelplattor, bra förvaring och LED-belysning.",
     category: "Badrum",
     image: PROJECT_IMAGES.bathroomModernMain,
     slides: [
@@ -219,10 +214,11 @@ export const PROJECTS: GalleryProject[] = [
     year: "2025",
     location: "Helsingborg",
     scopeOfWork: [
-      "Fullständig rivning och fuktsäkring enligt BKR-standard",
-      "Gjutning av fall mot designbrunn",
-      "Montering av storformatig keramik på både golv och väggar",
-      "Installation av dolda LED-profiler och mattsvarta takduschar",
+      "Rivning och förberedelse.",
+      "Montering av tätskikt.",
+      "Läggning av kakel och klinker.",
+      "Installation av badrumsinredning och armatur.",
+      "Slutkontroll och färdigställande.",
     ],
     specs: [
       { label: "Kakel/Klinker", value: "Granitkeramik 60x60cm" },
@@ -238,9 +234,9 @@ export const PROJECTS: GalleryProject[] = [
   },
   {
     id: "djursholm",
-    title: "Staket & Grind Hittarp",
+    title: "Staket",
     description:
-      "Säkerhetsstaket och motoriserade smidesgrindar som kombinerar maximal integritet med elegant herrgårdskänsla.",
+      "Vi byggde ett stabilt trästaket med grind som ger både trygghet och en fin inramning av trädgården.",
     category: "Staket",
     image: PROJECT_IMAGES.fenceDjursholmMain,
     slides: [
@@ -252,10 +248,11 @@ export const PROJECTS: GalleryProject[] = [
     year: "2024",
     location: "Helsingborg",
     scopeOfWork: [
-      "Gjutning av djupgående frostfria betongplintar för grindstolpar",
-      "Montering av skräddarsydda smidesgrindar med rostskyddsbehandling",
-      "Integration av grindmotorer, kodlås & intercom",
-      "Platsbyggt matchande trästaket i sibirisk lärk med täta spjälor",
+      "Markförberedelser och uppmätning.",
+      "Montering av stolpar och staket.",
+      "Montering av grind.",
+      "Justering och finish.",
+      "Slutkontroll och färdigställande.",
     ],
     specs: [
       { label: "Grindtyp", value: "Dubbel smidesgrind" },
@@ -271,9 +268,9 @@ export const PROJECTS: GalleryProject[] = [
   },
   {
     id: "danderyd-kitchen",
-    title: "Minimalistiskt Kök Hittarp",
+    title: "Minimaliskt Kök",
     description:
-      "Ett stilrent, minimalistiskt kök i mörkbetsad ek kombinerat med slät kompositsten och dolda integrerade handtag.",
+      "Vi byggde ett stilrent kök med släta luckor, stenskiva och dolda handtag.",
     category: "Kök",
     image: PROJECT_IMAGES.kitchenDanderydMain,
     slides: [
@@ -287,10 +284,11 @@ export const PROJECTS: GalleryProject[] = [
     year: "2025",
     location: "Helsingborg",
     scopeOfWork: [
-      "Demontering av befintligt kök & återvinning av material",
-      "Uträtning av sneda väggar & förberedelse för skåpstommar",
-      "Montering av mörkbetsade ekfronter med Push-to-open funktion",
-      "Installation av premium integrerade vitvaror från Miele",
+      "Rivning och förberedelse.",
+      "Montering av köksstommar och luckor.",
+      "Installation av bänkskiva och vitvaror.",
+      "Montering av belysning och detaljer.",
+      "Slutkontroll och färdigställande.",
     ],
     specs: [
       { label: "Fronter", value: "Mörkbetsad Ekfanér" },
@@ -306,9 +304,9 @@ export const PROJECTS: GalleryProject[] = [
   },
   {
     id: "moden-kitchen",
-    title: "Modernt Kök Råå",
+    title: "Modernt Kök",
     description:
-      "Ett elegant, ljust och modernt kök med släta luckor, integrerad belysning och bänkskiva i tålig ljus kompositsten.",
+      "Vi renoverade köket med släta luckor, integrerad belysning och en tålig stenskiva.",
     category: "Kök",
     image: PROJECT_IMAGES.kitchenModernMain,
     slides: [
@@ -322,10 +320,11 @@ export const PROJECTS: GalleryProject[] = [
     year: "2025",
     location: "Helsingborg",
     scopeOfWork: [
-      "Planering och fullständig demontering av det äldre köket",
-      "Väggförstärkning och finspackling före montage",
-      "Installation av skräddarsydda stommar och dämpade luckor",
-      "Montering av planlimmad diskho och integrerade ljusprofiler",
+      "Rivning av det gamla köket.",
+      "Montering av köksstommar och luckor.",
+      "Installation av bänkskiva och vitvaror.",
+      "Montering av belysning och detaljer.",
+      "Slutkontroll och färdigställande.",
     ],
     specs: [
       { label: "Fronter", value: "Lackerad MDF (Sidenmatt)" },
@@ -341,9 +340,9 @@ export const PROJECTS: GalleryProject[] = [
   },
   {
     id: "ute-kök",
-    title: "Exklusivt Utekök Rydebäck",
+    title: "Utekök",
     description:
-      "Ett robust och platsbyggt utekök i massiv teak och gjuten betong, utrustat med högpresterande integrerad gasolgrill.",
+      "Vi byggde ett platsbyggt utekök med bänkskiva, diskho och plats för grill med möjlighet till att öppna och stänga.",
     category: "Kök",
     image: PROJECT_IMAGES.kitchenUteMain,
     slides: [
@@ -358,10 +357,11 @@ export const PROJECTS: GalleryProject[] = [
     year: "2025",
     location: "Helsingborg",
     scopeOfWork: [
-      "Konstruktion av bärande ramverk i väderbeständig teak",
-      "Formgjutning och polering av bänkskiva i rå betong",
-      "Integration av rostfri gasolgrill samt diskho med blandare",
-      "VVS-lösning för enkel avstängning och tömning inför vintern",
+      "Planering och förberedelser.",
+      "Montering av stomme och bänkskivor.",
+      "Installation av diskho och grill.",
+      "Montering av köksinredning.",
+      "Slutkontroll och färdigställande.",
     ],
     specs: [
       { label: "Material", value: "Kombination av betong och teak" },
@@ -377,9 +377,9 @@ export const PROJECTS: GalleryProject[] = [
   },
   {
     id: "elementskydd ",
-    title: "Sekelskiftes Elementskydd Tågaborg",
+    title: "Elementskydd",
     description:
-      "Skräddarsydda och handtillverkade elementskydd i klassisk design med rottinggaller, anpassade för turn-of-the-century lägenhet.",
+      "Vi byggde måttanpassade elementskydd i trä som passar hemmets stil.",
     category: "Elementskydd",
     image: PROJECT_IMAGES.elementskyddMain,
     slides: [
@@ -391,10 +391,11 @@ export const PROJECTS: GalleryProject[] = [
     year: "2025",
     location: "Helsingborg",
     scopeOfWork: [
-      "Millimeterprecision vid uppmätning under djupa fönsterbrädor",
-      "Egen tillverkning av ramar i massiv furu och montering av rotting",
-      "Utformning av lufthål för optimal värmecirkulation",
-      "Slutmålning och upphängning med dolda magnetfästen",
+      "Uppmätning och planering.",
+      "Tillverkning av måttanpassade elementskydd.",
+      "Montering och finjustering.",
+      "Målning och ytbehandling.",
+      "Slutkontroll och färdigställande.",
     ],
     specs: [
       { label: "Material", value: "Massiv furu & Rottinggaller" },
@@ -410,9 +411,9 @@ export const PROJECTS: GalleryProject[] = [
   },
   {
     id: "trädgårdsarbete",
-    title: "Trädgårdsanläggning Maria Park",
+    title: "Trädgårdsarbete",
     description:
-      "En komplett förvandling av trädgården med stilren stensättning av svensk granit, prydliga murar samt rullgräs.",
+      "Vi byggde om trädgården med stenläggning, murar och ny gräsmatta.",
     category: "Trädgårdsarbete",
     image: PROJECT_IMAGES.trädgårdsarbeteMain,
     slides: [
@@ -426,10 +427,11 @@ export const PROJECTS: GalleryProject[] = [
     year: "2025",
     location: "Helsingborg",
     scopeOfWork: [
-      "Schaktning, nivellering och förstärkning av bärlager",
-      "Stensättning av gångar samt uteplats med kantstöd",
-      "Konstruktion av murar för att skapa plana och funktionella ytor",
-      "Utläggning av premium rullgräs och plantering av vintergrön häck",
+      "Markförberedelser.",
+      "Schaktning och nivellering.",
+      "Stensättning och murbygge.",
+      "Gräsmatta och plantering.",
+      "Färdigställande.",
     ],
     specs: [
       { label: "Sten", value: "Grå Flammad Granit" },
@@ -445,9 +447,9 @@ export const PROJECTS: GalleryProject[] = [
   },
   {
     id: "fönsterbyte",
-    title: "Energieffektivt Fönsterbyte Stattena",
+    title: "Fönsterbyte",
     description:
-      "Ett omfattande byte till moderna, underhållsfria 3-glasfönster med hög isoleringsförmåga för minskade uppvärmningskostnader.",
+      "Vi bytte till moderna 3-glasfönster som ger bättre isolering och lägre uppvärmningskostnader.",
     category: "Fönsterbyte",
     image: PROJECT_IMAGES.fönsterbyteMain,
     slides: [
@@ -462,10 +464,11 @@ export const PROJECTS: GalleryProject[] = [
     year: "2025",
     location: "Helsingborg",
     scopeOfWork: [
-      "Fackmannamässig demontering av gamla och dragiga fönster",
-      "Inpassning, drevning samt tätning av de nya fönsterkarmarna",
-      "Montering av utvändiga plåtar, foder samt snygga fönsterbleck",
-      "Justering av beslag och slutbesiktning för maximal täthet",
+      "Demontering av gamla fönster.",
+      "Montering av nya fönster.",
+      "Isolering och tätning.",
+      "Justering och invändig kontroll.",
+      "Slutkontroll och färdigställande.",
     ],
     specs: [
       { label: "Fönstertyp", value: "Träfönster med utvändig aluminium" },
@@ -481,9 +484,9 @@ export const PROJECTS: GalleryProject[] = [
   },
   {
     id: "uterum",
-    title: "Isolerat Uterum Hittarp",
+    title: "Isolerat Uterum",
     description:
-      "Byggnation av ett modernt, stabilt uterum med gedigen limträstomme och isolerade glaspartier för härlig användning från tidig vår till sen höst.",
+      "Vi byggde ett isolerat uterum med stora glaspartier. Det passar perfekt från vår till höst.",
     category: "Uterum",
     image: PROJECT_IMAGES.uterumMain,
     slides: [
@@ -499,10 +502,11 @@ export const PROJECTS: GalleryProject[] = [
     year: "2025",
     location: "Helsingborg",
     scopeOfWork: [
-      "Anläggning av gjuten isolerad betonggrund",
-      "Resning av rejäl och vitmålad limträstomme",
-      "Montering av tåligt och tätt kanalplasttak (isolerat)",
-      "Installation av skjutbara glaspartier och slitstarkt golv",
+      "Markarbete och grundläggning.",
+      "Byggnation av stomme och tak.",
+      "Montering av glaspartier och dörrar.",
+      "Isolering och invändig färdigställning.",
+      "Slutkontroll och färdigställande.",
     ],
     specs: [
       { label: "Stomme", value: "Svenskt Limträ (behandlat & målat)" },
@@ -518,9 +522,9 @@ export const PROJECTS: GalleryProject[] = [
   },
   {
     id: "tillbyggnad",
-    title: "Tillbyggnad Sovrum & Vardagsrum",
+    title: "Hus Med Ny Tillbyggnad",
     description:
-      "En väldesignad tillbyggnad på 45 kvm som ger villan ett nytt master bedroom samt ett rymligt och ljust vardagsrum med högt i tak.",
+      "Vi byggde en tillbyggnad med ett nytt sovrum och ett ljust vardagsrum med högt i tak.",
     category: "Tillbyggnad",
     image: PROJECT_IMAGES.tillbyggnadMain,
     slides: [
@@ -537,10 +541,11 @@ export const PROJECTS: GalleryProject[] = [
     year: "2025",
     location: "Helsingborg",
     scopeOfWork: [
-      "Schaktning, isolering och gjutning av betongplatta på mark",
-      "Resning av trästomme och montering av takstolar",
-      "Sömlös hopfogning av tak och fasadbeklädnad med befintligt hus",
-      "Montering av gipsskivor, målning och läggning av ekparkett",
+      "Markarbete och gjutning av grund.",
+      "Byggnation av stomme och montering av takstolar.",
+      "Montering av tak, fönster och fasad.",
+      "Isolering, målning av väggar och golvläggning invändigt.",
+      "Slutkontroll och färdigställande.",
     ],
     specs: [
       { label: "Tillbyggnadsyta", value: "45 kvm bruttoarea" },

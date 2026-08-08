@@ -1,13 +1,5 @@
 import * as React from "react";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Check,
-  Send,
-  Award,
-  FileText,
-} from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { COMPANY_INFO } from "../data/companyData";
 import { Container } from "../components/ui/Container";
 import { Typography } from "../components/ui/Typography";
@@ -38,7 +30,7 @@ export const Footer: React.FC = () => {
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gold/1.5 skew-x-12 translate-x-1/2 pointer-events-none" />
 
       <Container size="xl" className="relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
           {/* Brand/About */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
@@ -149,7 +141,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Premium Newsletter Block */}
-          <div className="space-y-6">
+          {/* <div className="space-y-6">
             <Typography
               variant="label"
               color="gold"
@@ -204,7 +196,7 @@ export const Footer: React.FC = () => {
                 </p>
               )}
             </form>
-          </div>
+          </div> */}
         </div>
 
         {/* Footer bottom bar */}
