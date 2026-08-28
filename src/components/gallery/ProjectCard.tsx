@@ -22,7 +22,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       animate={{ opacity: 1, y: 0, scale: 1 }}
       exit={{ opacity: 0, scale: 0.95 }}
       transition={{ duration: 0.45, delay: index * 0.05 }}
-      className="group relative overflow-hidden rounded-3xl cursor-pointer aspect-4/5 bg-white border border-black/4 shadow-md hover:shadow-2xl hover:border-gold/20 transition-all duration-500"
+      className="group relative overflow-hidden rounded-3xl cursor-pointer aspect-4/5 bg-white border border-black/4 shadow-md hover:shadow-2xl hover:border-gold/20 transition-all duration-500 z-51"
       onClick={onClick}
     >
       {/* Visual Image Container with custom ratio */}
