@@ -8,7 +8,7 @@ export const COMPANY_INFO = {
   email: "info@asbyggtjanster.se",
   address: "Verksam i Helsingborg och närliggande kommuner i Skåne",
   aboutImage: "/images/about/about.webp",
-  heroBg: "/images/home/home.webp",
+  heroBg: "/home.webp",
 };
 
 export const SERVICES: Service[] = [
