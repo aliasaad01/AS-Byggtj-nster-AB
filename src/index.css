@@ -1,18 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap'); */
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", system-ui, -apple-system, sans-serif;
   --font-display: "Hanken Grotesk", sans-serif;
-  
+
   --color-primary: #111111;
-  --color-gold: #D4A437;
-  --color-gold-hover: #C29329;
-  --color-gold-light: #FBF7ED;
-  --color-dark-gray: #1E1F21;
-  --color-muted-dark: #5A5E63;
-  --color-light-gray: #F9FAFB;
-  
+  --color-gold: #d4a437;
+  --color-gold-hover: #c29329;
+  --color-gold-light: #fbf7ed;
+  --color-dark-gray: #1e1f21;
+  --color-muted-dark: #5a5e63;
+  --color-light-gray: #f9fafb;
+
   --spacing-section-gap: 128px;
 }
 
@@ -23,7 +23,7 @@
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.4);
   }
-  
+
   .glass-card-dark {
     background-color: rgba(30, 31, 33, 0.7);
     backdrop-filter: blur(20px);
@@ -38,7 +38,7 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 body {
@@ -47,7 +47,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Customize smooth scroll margins so sticky nav doesn't cut off section headers */
 section {
   scroll-margin-top: 80px;
 }
