@@ -19,15 +19,19 @@ export const Hero: React.FC = () => {
       id="hero"
       className="relative min-h-svh flex items-center justify-center pt-8 overflow-hidden bg-primary"
     >
-      {/* Immersive high resolution background image with slow zoom effect */}
+      {/* Immersive background image using standard img tag for fast LCP detection */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-b from-black/75 via-black/55 to-primary z-10" />
-        <motion.div
+        <motion.img
+          src={COMPANY_INFO.heroBg}
+          alt="AS Byggtjänster Hero"
+          loading="eager"
+          // @ts-ignore
+          fetchPriority="high"
           initial={{ scale: 1.05 }}
           animate={{ scale: 1 }}
           transition={{ duration: 15, ease: "easeOut" }}
-          className="w-full h-full bg-cover bg-center"
-          style={{ backgroundImage: `url(${COMPANY_INFO.heroBg})` }}
+          className="w-full h-full object-cover object-center"
         />
       </div>
 
@@ -77,7 +81,7 @@ export const Hero: React.FC = () => {
           projekt utförs med högsta standard.
           <br />
           <span className="font-bold text-gold">
-            `Begär en kostnadsfri offert redan idag`
+            Begär en kostnadsfri offert redan idag
           </span>
         </Typography>
 
