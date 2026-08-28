@@ -120,7 +120,7 @@ export const CookieConsent: React.FC<CookieConsentProps> = ({
               <button
                 type="button"
                 onClick={handleAcceptNecessary}
-                className="flex min-h-[44px] w-full items-center justify-center rounded-xl border border-black/5 bg-black/5 px-4 py-2.5 text-xs font-semibold text-primary outline-none transition-all cursor-pointer hover:bg-black/10 sm:min-h-0 sm:w-auto"
+                className="flex min-h-11 w-full items-center justify-center rounded-xl border border-black/5 bg-black/5 px-4 py-2.5 text-xs font-semibold text-primary outline-none transition-all cursor-pointer hover:bg-black/10 sm:min-h-0 sm:w-auto"
               >
                 Endast nödvändiga
               </button>
@@ -129,7 +129,7 @@ export const CookieConsent: React.FC<CookieConsentProps> = ({
                 <button
                   type="button"
                   onClick={handleAcceptAll}
-                  className="flex min-h-[44px] flex-1 items-center justify-center rounded-xl bg-primary px-5 py-2.5 text-xs font-bold text-white outline-none transition-all cursor-pointer shadow-md shadow-primary/10 shrink-0 hover:bg-primary/90 sm:min-h-0 sm:w-auto sm:flex-none"
+                  className="flex min-h-11 flex-1 items-center justify-center rounded-xl bg-primary px-5 py-2.5 text-xs font-bold text-white outline-none transition-all cursor-pointer shadow-md shadow-primary/10 shrink-0 hover:bg-primary/90 sm:min-h-0 sm:w-auto sm:flex-none"
                 >
                   Godkänn alla
                 </button>
@@ -137,7 +137,7 @@ export const CookieConsent: React.FC<CookieConsentProps> = ({
                 <button
                   type="button"
                   onClick={handleAcceptNecessary}
-                  className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-lg p-2 text-muted-dark transition-colors cursor-pointer hover:bg-black/5 hover:text-primary sm:min-h-0 sm:min-w-0"
+                  className="flex min-h-11 min-w-11 items-center justify-center rounded-lg p-2 text-muted-dark transition-colors cursor-pointer hover:bg-black/5 hover:text-primary sm:min-h-0 sm:min-w-0"
                   aria-label="Stäng"
                 >
                   <X className="h-4 w-4" />
