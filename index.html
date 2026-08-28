@@ -4,14 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- 1. Google Consent Mode v2 Default (يجب أن يكون قبل كود GTM) -->
+    <!-- 1. Google Consent Mode v2 Default -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
 
-      // الضبط الافتراضي لحالة الخصوصية (معطلة حتى يوافق الزائر)
       gtag("consent", "default", {
         analytics_storage: "denied",
         ad_storage: "denied",
@@ -64,7 +63,6 @@
       property="og:description"
       content="Professionella byggtjänster med skandinavisk precision och certifierad trygghet. Se vår portfölj av exklusiva projekt i Helsingborg."
     />
-    <!-- صورة معاينة الواتساب المباشرة -->
     <meta
       property="og:image"
       content="https://www.asbyggtjanster.se/og-image.jpg"
@@ -88,11 +86,21 @@
       content="https://www.asbyggtjanster.se/og-image.jpg"
     />
 
-    <!-- Favicons لنتائج بحث جوجل والمتصفحات -->
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="apple-touch-icon" href="/favicon.png" />
+    <!-- Favicons (مع إضافة Cache Buster لتحديث الأيقونة فوراً) -->
+    <link rel="icon" type="image/png" href="/favicon.png?v=2" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon-32x32.png?v=2"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon-16x16.png?v=2"
+    />
+    <link rel="apple-touch-icon" href="/favicon.png?v=2" />
 
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
