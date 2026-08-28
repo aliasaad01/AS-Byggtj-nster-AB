@@ -68,7 +68,7 @@ export const Navbar: React.FC = () => {
             <img
               src={COMPANY_INFO.logo}
               alt={COMPANY_INFO.name}
-              className={`h-10 md:h-12 w-auto object-contain transition-all duration-500 `}
+              className={`h-8 md:h-10 w-auto object-contain transition-all duration-500 `}
               loading="eager"
             />
           </a>
