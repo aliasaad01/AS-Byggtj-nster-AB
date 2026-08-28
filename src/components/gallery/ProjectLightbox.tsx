@@ -287,7 +287,7 @@ export const ProjectLightbox: React.FC<ProjectLightboxProps> = ({
                 variant="primary"
                 className="w-full text-xs uppercase tracking-widest font-bold py-3.5"
               >
-                Diskutera Liknande Projekt Med Oss
+                Begär offert
               </Button>
             </a>
           </div>

@@ -15,7 +15,7 @@ export const ContactInfo: React.FC = () => {
           color="primary"
           className="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-6 font-display"
         >
-          Låt Oss Prata Om Ditt Projekt
+          Låt oss prata om ditt projekt
         </Typography>
         <Typography
           variant="body"

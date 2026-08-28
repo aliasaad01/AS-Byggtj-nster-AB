@@ -23,8 +23,8 @@ export const Services: React.FC = () => {
         {/* Responsive Section Title */}
         <SectionTitle
           badge="Våra Expertområden"
-          title="Skräddarsydda Lösningar för Ditt Drömhem"
-          description="Från koncept till slutbesiktning hanterar vi varje detalj av ditt projekt med skandinavisk precision och certifierad trygghet."
+          title="Vi hjälper dig att skapa ditt drömhem"
+          description="Från första idé till färdigt projekt hjälper vi dig genom hela processen. Vi tar hand om detaljerna och ser till att arbetet håller hög kvalitet och utförs på ett tryggt och professionellt sätt."
           align="center"
         />
 

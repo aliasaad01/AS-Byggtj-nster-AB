@@ -44,9 +44,9 @@ export const CTA: React.FC = () => {
             variant="display"
             color="primary"
             as="h2"
-            className="text-3xl sm:text-4xl md:text-5.5xl font-extrabold tracking-tight leading-tight max-w-4xl mx-auto"
+            className="text-3xl sm:text-3xl md:text-5xl font-extrabold tracking-tight leading-tight max-w-4xl mx-auto"
           >
-            Redo att Starta Ditt Nästa Drömprojekt?
+            Redo att starta ditt nästa drömprojekt?
           </Typography>
 
           <Typography
