@@ -2,9 +2,47 @@ import * as React from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Cookie, ShieldCheck, X } from "lucide-react";
 
+// تعريف أنواع gtag و dataLayer لمنع أخطاء TypeScript
+declare global {
+  interface Window {
+    dataLayer?: Record<string, unknown>[];
+    gtag?: (
+      command: "consent",
+      action: "update",
+      params: {
+        analytics_storage: "granted" | "denied";
+        ad_storage: "granted" | "denied";
+        ad_user_data: "granted" | "denied";
+        ad_personalization: "granted" | "denied";
+      },
+    ) => void;
+  }
+}
+
 interface CookieConsentProps {
   onOpenPolicy?: () => void;
 }
+
+// دالة تحديث حالة التتبع في أدوات جوجل و GTM
+const updateConsentState = (isAcceptedAll: boolean): void => {
+  if (typeof window !== "undefined") {
+    window.dataLayer = window.dataLayer || [];
+    const status = isAcceptedAll ? "granted" : "denied";
+
+    if (typeof window.gtag === "function") {
+      window.gtag("consent", "update", {
+        analytics_storage: status,
+        ad_storage: status,
+        ad_user_data: status,
+        ad_personalization: status,
+      });
+    }
+
+    window.dataLayer.push({
+      event: isAcceptedAll ? "cookie_consent_all" : "cookie_consent_necessary",
+    });
+  }
+};
 
 export const CookieConsent: React.FC<CookieConsentProps> = ({
   onOpenPolicy,
@@ -18,16 +56,21 @@ export const CookieConsent: React.FC<CookieConsentProps> = ({
         setIsVisible(true);
       }, 1000);
       return () => clearTimeout(timer);
+    } else {
+      // إرسال تفضيل الزائر السابق فور تحميل الصفحة
+      updateConsentState(consent === "all");
     }
   }, []);
 
-  const handleAcceptAll = () => {
+  const handleAcceptAll = (): void => {
     localStorage.setItem("as_bygg_cookie_consent", "all");
+    updateConsentState(true);
     setIsVisible(false);
   };
 
-  const handleAcceptNecessary = () => {
+  const handleAcceptNecessary = (): void => {
     localStorage.setItem("as_bygg_cookie_consent", "necessary");
+    updateConsentState(false);
     setIsVisible(false);
   };
 
