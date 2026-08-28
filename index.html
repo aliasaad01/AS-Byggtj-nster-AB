@@ -1,7 +1,27 @@
 <!doctype html>
 <html lang="sv">
   <head>
-    <!-- Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 1. Google Consent Mode v2 Default (يجب أن يكون قبل كود GTM) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      // الضبط الافتراضي لحالة الخصوصية (معطلة حتى يوافق الزائر)
+      gtag("consent", "default", {
+        analytics_storage: "denied",
+        ad_storage: "denied",
+        ad_user_data: "denied",
+        ad_personalization: "denied",
+        wait_for_update: 500,
+      });
+    </script>
+
+    <!-- 2. Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
@@ -15,9 +35,6 @@
       })(window, document, "script", "dataLayer", "GTM-NHGF6J5V");
     </script>
     <!-- End Google Tag Manager -->
-
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Primary SEO Metadata -->
     <title>
@@ -33,10 +50,12 @@
     />
     <meta name="author" content="AS Byggtjänster AB" />
     <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.asbyggtjanster.se/" />
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / WhatsApp / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://asbyggtjanster.se" />
+    <meta property="og:site_name" content="AS Byggtjänster AB" />
+    <meta property="og:url" content="https://www.asbyggtjanster.se/" />
     <meta
       property="og:title"
       content="AS Byggtjänster AB | Premium Bygg & Totalentreprenad"
@@ -45,32 +64,35 @@
       property="og:description"
       content="Professionella byggtjänster med skandinavisk precision och certifierad trygghet. Se vår portfölj av exklusiva projekt i Helsingborg."
     />
+    <!-- صورة معاينة الواتساب المباشرة -->
     <meta
       property="og:image"
-      content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&h=630&q=80"
+      content="https://www.asbyggtjanster.se/og-image.jpg"
     />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
     <meta
-      property="twitter:title"
+      name="twitter:title"
       content="AS Byggtjänster AB | Premium Bygg & Totalentreprenad"
     />
     <meta
-      property="twitter:description"
+      name="twitter:description"
       content="Professionella byggtjänster med skandinavisk precision och certifierad trygghet. Se vår portfölj av exklusiva projekt i Helsingborg."
     />
     <meta
-      property="twitter:image"
-      content="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&h=630&q=80"
+      name="twitter:image"
+      content="https://www.asbyggtjanster.se/og-image.jpg"
     />
 
-    <!-- Elegant SVG Favicon (Gold Hammer/Sparkle Concept) -->
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔨</text></svg>"
-    />
+    <!-- Favicons لنتائج بحث جوجل والمتصفحات -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="/favicon.png" />
 
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
