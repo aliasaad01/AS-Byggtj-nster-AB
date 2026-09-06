@@ -78,7 +78,7 @@ as-byggtjänster/
 1. Clone the repository:
 ```bash
 
-git clone [https://github.com/aliasaad01/AS-Byggtj-nster-AB.git](https://github.com/aliasaad01/AS-Byggtj-nster-AB.git)
+git clone https://github.com/aliasaad01/AS-Byggtj-nster-AB.git
 cd AS-Byggtj-nster-AB
 
 npm install
